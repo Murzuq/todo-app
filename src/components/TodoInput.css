@@ -1,0 +1,30 @@
+.todo-input {
+  text-align: center;
+}
+.todo-input label {
+  display: block;
+  font-size: 1.5rem;
+}
+.todo-input input {
+  border: 2px solid #58b1b4;
+  border-radius: 5px;
+  font-size: large;
+  width: 500px;
+  height: 50px;
+  padding: 0.25rem 1rem;
+  outline-color: #3bd9db;
+}
+.todo-input + button {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #3bd9db;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.todo-input + button:active {
+  background-color: #0b7475;
+}
