@@ -22,6 +22,13 @@ function App() {
     });
   };
 
+  const deleteItemHandler = (itemId) => {
+    setTodoItem((prevTodo) => {
+      const updatedTodo = prevTodo.filter((item) => item.id !== itemId);
+      return updatedTodo;
+    });
+  };
+
   return (
     <div>
       <h1>Todo App</h1>
@@ -30,7 +37,7 @@ function App() {
           <TodoInput addTodo={addTodoHandler} />
         </section>
         <section className="todo__list">
-          <TodoList todoList={todoItem} />
+          <TodoList todoList={todoItem} onDeleteItem={deleteItemHandler} />
         </section>
       </div>
     </div>
