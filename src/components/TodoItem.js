@@ -3,7 +3,7 @@ import './TodoItem.css';
 const TodoItem = (props) => {
   return (
     <li className="todoitem">
-      <p>Learn React</p>
+      <p>{props.children}</p>
       <div>
         <button>Delete</button>
       </div>

@@ -2,10 +2,15 @@ import './TodoList.css';
 import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
+  console.log(props.todoList);
   return (
     <div className="todolist">
       <ul>
-        <TodoItem />
+        {props.todoList.map((todo) => (
+          <TodoItem key={todo.id} id={todo.id}>
+            {todo.item}
+          </TodoItem>
+        ))}
       </ul>
     </div>
   );

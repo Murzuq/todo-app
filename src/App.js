@@ -2,7 +2,14 @@ import './App.css';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 
+const dummyItem = [
+  { id: 1, item: 'Learn Js' },
+  { id: 2, item: 'Learn React' },
+  { id: 3, item: 'Run' },
+];
+
 function App() {
+  console.log(dummyItem);
   return (
     <div>
       <h1>Todo App</h1>
@@ -11,7 +18,7 @@ function App() {
           <TodoInput />
         </section>
         <section className="todo__list">
-          <TodoList />
+          <TodoList todoList={dummyItem} />
         </section>
       </div>
     </div>
