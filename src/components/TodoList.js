@@ -1,11 +1,11 @@
 import './TodoInput.css';
+import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
   return (
     <div>
       <ul>
-        <li>Todo List</li>
-        <li>Todo List</li>
+        <TodoItem />
       </ul>
     </div>
   );
