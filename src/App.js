@@ -1,5 +1,6 @@
 import './App.css';
 import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         <section className="todo__form">
           <TodoInput />
         </section>
-        <section className="todo__list">TodoList</section>
+        <section className="todo__list">
+          <TodoList />
+        </section>
       </div>
     </div>
   );
