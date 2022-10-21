@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
@@ -9,16 +10,27 @@ const dummyItem = [
 ];
 
 function App() {
-  console.log(dummyItem);
+  const [todoItem, setTodoItem] = useState(dummyItem);
+  console.log(todoItem);
+
+  const addTodoHandler = (enteredText) => {
+    setTodoItem((prevTodo) => {
+      const updatedTodo = [...prevTodo];
+      updatedTodo.unshift({ id: Math.random().toString(), item: enteredText });
+      // updatedTodo.push({ id: Math.random().toString(), item: enteredText });
+      return updatedTodo;
+    });
+  };
+
   return (
     <div>
       <h1>Todo App</h1>
       <div className="todo">
         <section className="todo__form">
-          <TodoInput />
+          <TodoInput addTodo={addTodoHandler} />
         </section>
         <section className="todo__list">
-          <TodoList todoList={dummyItem} />
+          <TodoList todoList={todoItem} />
         </section>
       </div>
     </div>
