@@ -1,0 +1,20 @@
+.todoitem {
+  background-color: aqua;
+  padding: 2px 14px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoitem button {
+  background-color: #d82222;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todoitem button:active {
+  background-color: #d14444;
+}
