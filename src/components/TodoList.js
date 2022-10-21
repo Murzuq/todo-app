@@ -1,9 +1,9 @@
-import './TodoInput.css';
+import './TodoList.css';
 import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
   return (
-    <div>
+    <div className="todolist">
       <ul>
         <TodoItem />
       </ul>
