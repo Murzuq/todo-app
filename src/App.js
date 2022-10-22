@@ -7,6 +7,7 @@ const dummyItem = [
   { id: 1, item: 'Learn Js' },
   { id: 2, item: 'Learn React' },
   { id: 3, item: 'Run' },
+  { id: 4, item: 'Read Book' },
 ];
 
 function App() {
