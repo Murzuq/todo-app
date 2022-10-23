@@ -6,7 +6,7 @@ import TodoList from './components/TodoList';
 const dummyItem = [
   { id: 1, item: 'Learn Js' },
   { id: 2, item: 'Learn React' },
-  { id: 3, item: 'Run' },
+  { id: 3, item: 'Street Racing' },
   { id: 4, item: 'Read Book' },
 ];
 
