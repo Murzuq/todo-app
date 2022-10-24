@@ -4,7 +4,7 @@ import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 
 const dummyItem = [
-  { id: 1, item: 'Learn Js' },
+  { id: 1, item: 'Learn JavaScript' },
   { id: 2, item: 'Learn React' },
   { id: 3, item: 'Street Racing' },
   { id: 4, item: 'Read Book' },
