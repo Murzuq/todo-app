@@ -3,9 +3,14 @@ import './TodoInput.css';
 
 const TodoInput = (props) => {
   const [enteredValue, setEnteredValue] = useState('');
+  const [isValid, setIsValid] = useState(true);
 
   const todoInputChangeHandler = (event) => {
     console.log(event.target.value);
+
+    // if (event.target.value.trim().length > 0) {
+    //   return;
+    // }
 
     setEnteredValue(event.target.value);
   };
@@ -14,12 +19,17 @@ const TodoInput = (props) => {
     event.preventDefault();
     console.log(enteredValue);
 
+    if (enteredValue.trim().length === 0) {
+      setIsValid(false);
+      return;
+    }
+
     props.addTodo(enteredValue);
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className="todo-input">
+      <div className={`todo-input ${!isValid ? 'invalid' : ''}`}>
         {/* <label>Todo</label> */}
         <input
           type="text"

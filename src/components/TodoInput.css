@@ -28,3 +28,7 @@
 .todo-input + button:active {
   background-color: #0b7475;
 }
+
+.todo-input.invalid input {
+  background-color: red;
+}
