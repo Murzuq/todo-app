@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './TodoInput.css';
+import styles from './TodoInput.module.css';
 
 const TodoInput = (props) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -8,9 +8,9 @@ const TodoInput = (props) => {
   const todoInputChangeHandler = (event) => {
     console.log(event.target.value);
 
-    // if (event.target.value.trim().length > 0) {
-    //   return;
-    // }
+    if (event.target.value.trim().length > 0) {
+      setIsValid(true);
+    }
 
     setEnteredValue(event.target.value);
   };
@@ -29,7 +29,7 @@ const TodoInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={`todo-input ${!isValid ? 'invalid' : ''}`}>
+      <div className={`${styles['todo-input']} ${!isValid && styles.invalid}`}>
         {/* <label>Todo</label> */}
         <input
           type="text"
