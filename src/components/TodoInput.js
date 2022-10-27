@@ -6,7 +6,7 @@ const TodoInput = (props) => {
   const [isValid, setIsValid] = useState(true);
 
   const todoInputChangeHandler = (event) => {
-    // console.log(event.target.value);
+    console.log(event.target.value);
 
     if (event.target.value.trim().length > 0) {
       setIsValid(true);
